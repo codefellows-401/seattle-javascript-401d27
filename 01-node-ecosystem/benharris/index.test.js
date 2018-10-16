@@ -5,7 +5,7 @@
 const greet = require('./lib/greet.js');
 const arithmetic = require('./lib/arithmetic.js');
 
-// Greet Tests
+// Greet Module Tests
 describe('given a nonstring value', () => {
   test('returns as null', () => {
     const actual = greet(123);
@@ -22,7 +22,7 @@ describe('given a specific string value', () => {
   });
 });
 
-// Valid Arithmetic Tests
+// Valid Arithmetic Module Tests
 describe('given a valid number of parameters (arity of 2)', () => {
   test('successfully adds', () => {
     const actual = add(1,2);
@@ -49,7 +49,7 @@ describe('given a valid number of parameters (arity of 2)', () => {
   });
 });
 
-// Invalid Arithmetic Tests
+// Invalid Arithmetic Module Tests
 describe('given an invalid number of parameters', () => {
   test('returns as null', () => {
     const actual = add(1);
