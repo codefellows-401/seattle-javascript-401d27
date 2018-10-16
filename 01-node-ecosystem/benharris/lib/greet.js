@@ -2,8 +2,8 @@
 
 module.exports = (name) => {
   if(typeof name === 'string') {
-    console.log(`hello ${name}`);
+    return `Hello ${name}`;
   } else {
-    console.log(null);
+    return null;
   }
 };
