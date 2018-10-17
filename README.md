@@ -1,5 +1,3 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Code Fellows Seattle, Javascript 401d27
-=====================================
 > Advanced Software Development
 
 
@@ -26,6 +24,7 @@ All readings, homework, labs, and quizzes will be published, in Canvas, the week
 - Set up a new remote `git remote add upstream https://github.com/codefellows/seattle-javascript-401d27`
 - Prove it ... `git remote -v`
 - Every day, get the latest ...
+- `git checkout master`
 - Fetch our branches ... `git fetch upstream`
 - `git rebase upstream/master`
 
