@@ -2,14 +2,15 @@
 
 class List {
   // Class Constructor
-  constructor() {
+  constructor(name) {
+    this.name = name;
     this.length = 0;
   }
 
   //! Basic Functions //
-  //* EXAMPLE: hello()
+  //* REFERENCE: hello()
   listHello() {
-    console.log(`Hi! I'm ${this.value} from CodeFellows.`);
+    return `Hi! I'm ${this.name} from CodeFellows.`;
   }
 
   // .length
@@ -21,45 +22,33 @@ class List {
   }
 
   // TODO .push()
-  listPush(value) {
-    this[this.length] = value;
+  listPush(input) {
+    // find the length of the current input
+    this[this.length] = input;
+    
+    // modify the length
     this.length++;
+
+    // add value to the back of the list
+    // TODO 
+
+    // return the length
     return this.length;
   }
 
   // TODO .pop()
   listPop() {
-    let last = 0;
-    for(let i = 0; i <= this.length; i++) {
-      if(i === this.length) {
-        last = this[this.length-1];
-        delete this[i];
-      }
-    }
+    return 'some code';
   }
 
   // TODO .slice()
-  listSlice(array, begin, end) {
-    let arrLength = List.listLength(array);
-    let newArr = [];
-    
-    for(let i=begin; i <= array[end]; i++) {
-      if(begin === undefined && end === undefined) {
-        newArr[i] = array[i];
-      } else if (Number.isInteger(begin)) {
-        newArr[i-1] = this[begin + i - 1]
-      }      
-    }
-    return newArr;
+  listSlice() {
+    return 'some code';
   }
 
   // TODO .map()
   listMap(value) {
-    let mapList = new List();
-    for(let i=0; i < this.length; i++) {
-      mapList.push(value(this[i]));
-    }
-    return mapList;
+    return 'some code';
   }
 
   // TODO .filter()
@@ -79,14 +68,17 @@ class List {
   // .splice()
 }
 
-// Test Variables
-let value = 'Ben';
-let array = [1,2,3,4,5];
-let newList = new List(value, array);
+//* Test Variables
+let myName = 'Ben';
+let testArr = [1,2,3,4,5];
+let testStr = 'I am Ten!!';
+let testNum = 7;
+let newList = new List(myName);
 
-// Output Tests
-newList.listHello();
-newList.listLength();
+//* Method Tests
+// newList.listHello();
+// newList.listLength(testStr);
+newList.listPush(testArr);
 
-// Module Export
+//* Module Export
 module.exports = List;
