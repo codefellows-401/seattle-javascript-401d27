@@ -36,12 +36,12 @@ class List {
     return this.length;
   }
 
-  // TODO .pop()
+  // TODO .pop() // YOUTUBE: 9:40-9:45 // 10-17
   listPop() {
     return 'some code';
   }
 
-  // TODO .slice()
+  // TODO .slice() // YOUTUBE: 10:07-10:13 // 10-17
   listSlice() {
     return 'some code';
   }
@@ -51,12 +51,12 @@ class List {
     return 'some code';
   }
 
-  // TODO .filter()
+  // TODO .filter() // YOUTUBE: 9:57 // 10-17
   listFilter() {
     return 'some code';
   }
 
-  // TODO .reduce()
+  // TODO .reduce() // YOUTUBE: 10:02 // 10-17
   listReduce() {
     return 'some code';
   }
