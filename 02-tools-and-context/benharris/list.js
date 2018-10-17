@@ -2,9 +2,7 @@
 
 class List {
   // Class Constructor
-  constructor(value, array) {
-    this.value = value;
-    this.array = array;
+  constructor() {
     this.length = 0;
   }
 
@@ -14,9 +12,12 @@ class List {
     console.log(`Hi! I'm ${this.value} from CodeFellows.`);
   }
 
-  // TODO .length
-  listLength(array) {
-    return 'some code';
+  // .length
+  listLength(input) {
+    while (input[this.length] !== undefined) {
+      this.length++;
+    }
+    return this.length;
   }
 
   // TODO .push()
@@ -28,12 +29,28 @@ class List {
 
   // TODO .pop()
   listPop() {
-    return 'some code';
+    let last = 0;
+    for(let i = 0; i <= this.length; i++) {
+      if(i === this.length) {
+        last = this[this.length-1];
+        delete this[i];
+      }
+    }
   }
 
   // TODO .slice()
-  listSlice() {
-    return 'some code';
+  listSlice(array, begin, end) {
+    let arrLength = List.listLength(array);
+    let newArr = [];
+    
+    for(let i=begin; i <= array[end]; i++) {
+      if(begin === undefined && end === undefined) {
+        newArr[i] = array[i];
+      } else if (Number.isInteger(begin)) {
+        newArr[i-1] = this[begin + i - 1]
+      }      
+    }
+    return newArr;
   }
 
   // TODO .map()
