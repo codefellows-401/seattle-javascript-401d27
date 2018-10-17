@@ -1,78 +1,84 @@
 const List = require('../list.js');
+const newList = new List('Ben');
 
 // Basic Functionality
-describe('When properly invoked', () => {
+describe('When method is properly invoked...', () => {
 
-  it('listHello will provide a greeting.', () => {
-    const actual = List.listHello();
-    const expect = '';
-    expect(actual).toEqual(expect);
+  it('listHello will provide a proper greeting.', () => {
+    const input  = newList.listHello();
+    const output = `Hi! I'm Ben from CodeFellows.`;
+    expect(input).toMatch(output);
   });
 
-  it('listLength will return the length', () => {
-    const actual = List.listLength();
-    const expect = '';
-    expect(actual).toEqual(expect);
+  it('listLength will return the correct length of a string or array', () => {
+    const testStr = 'I am Ten!!';
+    const testArr = [0,1,2,3,4,5,6,7,8,9];
+    const input1  = newList.listLength(testStr);
+    const input2  = newList.listLength(testArr);
+    const output = 10;
+
+    expect(input1).toEqual(output);
+    expect(input2).toEqual(output);
   });
 
-  it('listPush will add one or more elements to the beginning of an array and return the new lengthy of the array', () => {
-    const actual = List.listPush();
-    const expect = '';
-    expect(actual).toEqual(expect);
+  it('listPush will add one or more elements to the END of an array and return the new length of the array', () => {
+    const input  = List.listPush();
+    const output = '';
+    expect(input).toEqual(output);
   });
 
-  it('listPop will remove an element from the end of an array and return the removed element', () => {
-    const actual = List.listPop();
-    const expect = '';
-    expect(actual).toEqual(expect);
-  });
+  // xit('listPop will remove an element from the END of an array and return the removed element', () => {
+  //   const input  = List.listPop();
+  //   const output = '';
+  //   expect(input).toEqual(output);
+  // });
 
-  it('listSlice will return a portion of an array as a new array object, but not include the end of the specified range', () => {
-    const actual = List.listSlice();
-    const expect = '';
-    expect(actual).toEqual(expect);
-  });
+  // xit('listSlice will return a portion of an array as a new array object, but not include the end of the specified range', () => {
+  //   const input  = List.listSlice();
+  //   const output = '';
+  //   expect(input).toEqual(output);
+  // });
 
-  it('listMap will create a new array with the results of calling a provided function on every element in the calling array.', () => {
-    const actual = List.listMap();
-    const expect = '';
-    expect(actual).toEqual(expect);
-  });
+  // xit('listMap will create a new array with the results of calling a provided function on every element in the calling array.', () => {
+  //   const input  = List.listMap();
+  //   const output = '';
+  //   expect(input).toEqual(output);
+  // });
 
-  it('listFilter will create a new array with all elements that pass the test implemented by the provided function.', () => {
-    const actual = List.listFilter();
-    const expect = '';
-    expect(actual).toEqual(expect);
-  });
+  // xit('listFilter will create a new array with all elements that pass the test implemented by the provided function.', () => {
+  //   const input  = List.listFilter();
+  //   const output = '';
+  //   expect(input).toEqual(output);
+  // });
 
-  it('listReduce will execute a reducer function on each member of the array resulting in a single output value', () => {
-    const actual = List.listReduce();
-    const expect = '';
-    expect(actual).toEqual(expect);
-  });
+  // xit('listReduce will execute a reducer function on each member of the array resulting in a single output value', () => {
+  //   const input  = List.listReduce();
+  //   const output = '';
+  //   expect(input).toEqual(output);
+  // });
 
   //* STRETGH GOALS
   // xit('listForEach will execute a provided function once for each array element.', () => {
-  //   const actual = List.listForEach();
-  //   const expect = '';
-  //   expect(actual).toEqual(expect);
+  //   const input  = List.listForEach();
+  //   const output = '';
+  //   expect(input).toEqual(output);
   // });
 
   // xit('listShift', () => {
-  //   const actual = List.listShift();
-  //   const expect = '';
-  //   expect(actual).toEqual(expect);
+  //   const input  = List.listShift();
+  //   const output = '';
+  //   expect(input).toEqual(output);
   // });
 
   // xit('listUnshift', () => {
-  //   const actual = List.listUnshift();
-  //   const expect = '';
-  //   expect(actual).toEqual(expect);
+  //   const input  = List.listUnshift();
+  //   const output = '';
+  //   expect(input).toEqual(output);
   // });
 
   // xit('listSplice', () => {
-  //   const actual = List.listSplice();
-  //   const expect = '';
-  //   expect(actual).toEqual(expect);
+  //   const input  = List.listSplice();
+  //   const output = '';
+  //   expect(input).toEqual(output);
   // });
 });
